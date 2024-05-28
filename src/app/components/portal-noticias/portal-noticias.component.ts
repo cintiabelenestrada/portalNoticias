@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PortalNoticiasService } from '../../services/portal-noticias.service';
-import {  InterfaceCategorias } from '../../models/portal-noticias';
+import {  InterfaceCategorias } from '../../models/categorias';
 
 @Component({
   selector: 'app-portal-noticias',
