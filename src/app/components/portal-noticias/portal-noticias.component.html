@@ -1,9 +1,10 @@
-<button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarNoticias()">mostrar Noticias</button>
 <div>
-    @for (noticia of noticias; track $index)
+    <h1>Categorias de Noticia:</h1>
+    <button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarCategorias()">mostrar Categorias</button>
+    @for (categoria of categorias; track $index)
     {
-        <h3>{{ noticia.seo.title }}</h3>
-        <p>{{ noticia.seo.description }}</p>
+        <h3>{{ categoria.seo.title }}</h3>
+        <p>{{ categoria.seo.description }}</p>
     }
 
   </div>
