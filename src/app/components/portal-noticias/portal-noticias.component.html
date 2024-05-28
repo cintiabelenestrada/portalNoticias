@@ -1,11 +1,23 @@
-<div>
-    <h1>Categorias de Noticia:</h1>
-    <button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarCategorias()">mostrar Categorias</button>
-    @for (categoria of categorias; track $index)
-    {
-        <h3>{{ categoria.seo.title }}</h3>
-        <p>{{ categoria.seo.description }}</p>
-    }
+<div class="container-fluid">
+    <section>
+        <button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarDatosDeApi()">mostrar</button>
+        <h1>Categorias de Noticia:</h1>
+        @for (categoria of categorias; track $index)
+        {
+            <h3>{{ categoria.seo.title }}</h3>
+            <p>{{ categoria.seo.description }}</p>
+        }
 
-  </div>
+        <h1>Noticias:</h1>
+        @for (homepageArticle of homepageArticles; track $index){
+            @for (article of homepageArticle.articles; track $index) {           
+                <p>{{ article.title }}</p>
+                @for (media of article.mainMedia; track $index) {
+                    <p>{{ media.gallery.url }}</p>
+                    <p>{{ media.gallery.alt }}</p>
+                }
+            }
+        }
+    </section>
+</div>
   
