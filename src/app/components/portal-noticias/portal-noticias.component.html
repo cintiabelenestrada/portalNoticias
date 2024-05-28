@@ -1,1 +1,10 @@
 <button type="button" id="DireccionIp" name="DireccionIp" (click)="mostrarNoticias()">mostrar Noticias</button>
+<div>
+    @for (noticia of noticias; track $index)
+    {
+        <h3>{{ noticia.seo.title }}</h3>
+        <p>{{ noticia.seo.description }}</p>
+    }
+
+  </div>
+  
